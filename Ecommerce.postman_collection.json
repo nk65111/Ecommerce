@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "a1e880d0-1063-4102-8d5c-5ae7d89f3e2c",
+		"name": "Ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16297528"
+	},
+	"item": [
+		{
+			"name": "add-product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"product_brand\": \"One plus\",\r\n  \"product_category\": \"Mobile\",\r\n  \"product_description\": \"OnePlus 8T. Warp Charge 65 120 Hz Fluid Display Qualcomm® Snapdragon™ 865 and 5G 48 MP Quad Camera \",\r\n  \"product_image\": \"abc.png\",\r\n  \"product_name\": \"One Plus 8T\",\r\n  \"product_price\": \"45000\",\r\n  \"product_quantity\": 2000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/product/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all-product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/product/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/product/b86184a3-e6d1-4ea0-a736-64b2e2530438",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						"b86184a3-e6d1-4ea0-a736-64b2e2530438"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"product_id\": \"b86184a3-e6d1-4ea0-a736-64b2e2530438\",\r\n  \"product_quantity\": 1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/product/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/product/f4092924-c78f-435f-ab2e-e7be8f25d835",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						"f4092924-c78f-435f-ab2e-e7be8f25d835"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check-product-available",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/product/isAvailable/?product_id=b86184a3-e6d1-4ea0-a736-64b2e2530438&product_quantity=500",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						"isAvailable",
+						""
+					],
+					"query": [
+						{
+							"key": "product_id",
+							"value": "b86184a3-e6d1-4ea0-a736-64b2e2530438"
+						},
+						{
+							"key": "product_quantity",
+							"value": "500"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
